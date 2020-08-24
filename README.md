@@ -4,8 +4,8 @@
 
 1. [ESLint + Prettier](https://github.com/ebs-integrator/ebs-fe-intership-test-1)
 2. Typescript
-3. TS-Compiler (to build it as plugin)
-4. Unit tests with Mocha
+3. [TS Compiler](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+4. Tests using Mocha/Enzyme
 
 ## Todo:
 
