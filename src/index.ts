@@ -2,21 +2,26 @@
 
 /*FILTER*/
 
+const arr: Array<String> = [
+  'spray',
+  'limit',
+  'elite',
+  'exuberant',
+  'destruction',
+  'present',
+];
 
-const arr:Array<String> = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-
-const filterFn=()=>{
-  const newArr:Array<String>=[]
-  for(let i =0;i<arr.length;i++){
-    if(arr[i].length>6){
-      newArr.push(arr[i])
+const filterFn = () => {
+  const newArr: Array<String> = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > 6) {
+      newArr.push(arr[i]);
     }
   }
-  return newArr
-}
+  return newArr;
+};
 
-console.log(filterFn())
-
+console.log(filterFn());
 
 /*MAP*/
 
@@ -52,7 +57,6 @@ console.log(filterFn())
 
 // findItem(arr,id)
 
-
 /*CONCAT*/
 
 // const arr1 = ['spray', 'limit', 'elite'];
@@ -63,10 +67,7 @@ console.log(filterFn())
 // }
 
 // concatFn(arr1,arr2)
-
-
 /*PIPE*/
-
 
 // const arr = ['spray', 'limit', 'elite', 'exuberant', 'destruction'];
 
@@ -78,12 +79,11 @@ console.log(filterFn())
 //           newArr.push(arr[i])
 //         }
 //       }
-      
+
 //   for(let i=0;i<newArr.length;i++){
 //   result.push({"id":i,"name":newArr[i]})
 //   }
 //       return result
 //     }
-    
 
 // pipeFn(arr)
