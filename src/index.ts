@@ -3,19 +3,19 @@
 /*FILTER*/
 
 
-// const arr = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const arr:Array<String> = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
-// const filterFn=(arr)=>{
-//   const newArr=[]
-//   for(let i =0;i<arr.length;i++){
-//     if(arr[i].length>6){
-//       newArr.push(arr[i])
-//     }
-//   }
-//   return newArr
-// }
+const filterFn=()=>{
+  const newArr:Array<String>=[]
+  for(let i =0;i<arr.length;i++){
+    if(arr[i].length>6){
+      newArr.push(arr[i])
+    }
+  }
+  return newArr
+}
 
-// filterFn(arr)
+console.log(filterFn())
 
 
 /*MAP*/
