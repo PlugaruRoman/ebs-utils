@@ -9,15 +9,15 @@ const arrFilter: Array<String> = [
   'present',
 ];
 
-const filterFn = (arrFilter: Array<String>) => {
+const filterFn = (arrFilter: Array<String>, num: number) => {
   const newArr: Array<String> = [];
   for (let i = 0; i < arrFilter.length; i++) {
-    if (arrFilter[i].length > 6) {
+    if (arrFilter[i].length > num) {
       newArr.push(arrFilter[i]);
     }
   }
   return newArr;
 };
 
-filterFn(arrFilter);
+filterFn(arrFilter, 6);
 module.exports = filterFn;

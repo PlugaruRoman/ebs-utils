@@ -8,14 +8,10 @@ const pipeFn = require('../../lib/pipe');
 describe('Tests', function () {
   it('filterFn', () => {
     expect(
-      filterFn([
-        'spray',
-        'limit',
-        'elite',
-        'exuberant',
-        'destruction',
-        'present',
-      ])
+      filterFn(
+        ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'],
+        6
+      )
     ).deep.to.equal(['exuberant', 'destruction', 'present']);
   });
   it('mapFn', function () {
