@@ -2,7 +2,7 @@
 
 /*FILTER*/
 
-const arr: Array<String> = [
+const arrFilter: Array<String> = [
   'spray',
   'limit',
   'elite',
@@ -11,79 +11,86 @@ const arr: Array<String> = [
   'present',
 ];
 
-const filterFn = () => {
+const filterFn = (arrFilter: Array<String>) => {
   const newArr: Array<String> = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length > 6) {
-      newArr.push(arr[i]);
+  for (let i = 0; i < arrFilter.length; i++) {
+    if (arrFilter[i].length > 6) {
+      newArr.push(arrFilter[i]);
     }
   }
   return newArr;
 };
 
-console.log(filterFn());
+console.log(filterFn(arrFilter));
 
 /*MAP*/
 
-// const arr = ['spray', 'limit'];
+const arrMap: Array<String> = ['spray', 'limit'];
 
-// const mapFn=(arr)=>{
-//   let newArr=[]
-//   for(let i=0;i<arr.length;i++){
-//   newArr.push({"id":i,"name":arr[i]})
-//   }
-//   return newArr
-// }
+const mapFn = (arrMap: Array<String>) => {
+  let newArr = [];
+  for (let i = 0; i < arrMap.length; i++) {
+    newArr.push({ id: i, name: arrMap[i] });
+  }
+  return newArr;
+};
 
-// mapFn(arr)
+console.log(mapFn(arrMap));
 
 /*Find*/
 
-// const arr = [
-//   { id: 0, name: 'spray' },
-//   { id: 1, name: 'limit' },
-// ];
-// const id = 1;
+const arrFind: Array<Object> = [
+  { id: 0, name: 'spray' },
+  { id: 1, name: 'limit' },
+];
+const id = 1;
 
-// const findItem=(arr,id)=>{
-// let obj
-// for(let i =0;i<arr.length;i++){
-//   if(arr[i].id==id){
-//     obj= arr[i]
-//   }
-// }
-// return obj
-// }
+const findItem = (arrFind: Array<Object>, id: number) => {
+  let obj;
+  for (let i = 0; i < arrFind.length; i++) {
+    if (i == id) {
+      obj = arrFind[i];
+    }
+  }
+  return obj;
+};
 
-// findItem(arr,id)
+console.log(findItem(arrFind, id));
 
 /*CONCAT*/
 
-// const arr1 = ['spray', 'limit', 'elite'];
-// const arr2 = ['exuberant', 'destruction', 'present'];
+const arrConcat: Array<String> = ['spray', 'limit', 'elite'];
+const arrConcatTwo: Array<String> = ['exuberant', 'destruction', 'present'];
 
-// const concatFn =(arr1,arr2)=>{
-// return  [...arr1,...arr2]
-// }
+const concatFn = (arr1: Array<String>, arr2: Array<String>) => {
+  return [...arrConcat, ...arrConcatTwo];
+};
 
-// concatFn(arr1,arr2)
+console.log(concatFn(arrConcat, arrConcatTwo));
+
 /*PIPE*/
 
-// const arr = ['spray', 'limit', 'elite', 'exuberant', 'destruction'];
+const arrPipe: Array<String> = [
+  'spray',
+  'limit',
+  'elite',
+  'exuberant',
+  'destruction',
+];
 
-// const pipeFn =(arr)=>{
-//   const newArr=[]
-//   let result=[]
-//   for(let i =0;i<arr.length;i++){
-//         if(arr[i].length>6){
-//           newArr.push(arr[i])
-//         }
-//       }
+const pipeFn = (arrPipe: Array<String>) => {
+  const newArr = [];
+  let result = [];
+  for (let i = 0; i < arrPipe.length; i++) {
+    if (arrPipe[i].length > 6) {
+      newArr.push(arrPipe[i]);
+    }
+  }
 
-//   for(let i=0;i<newArr.length;i++){
-//   result.push({"id":i,"name":newArr[i]})
-//   }
-//       return result
-//     }
+  for (let i = 0; i < newArr.length; i++) {
+    result.push({ id: i, name: newArr[i] });
+  }
+  return result;
+};
 
-// pipeFn(arr)
+console.log(pipeFn(arrPipe));
