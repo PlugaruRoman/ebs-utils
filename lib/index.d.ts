@@ -7,7 +7,7 @@ declare const mapFn: (arrMap: Array<String>) => {
 }[];
 declare const arrFind: Array<Object>;
 declare const id = 1;
-declare const findItem: (arrFind: Array<Object>, id: number) => Object | undefined;
+declare const findItemFn: (arrFind: Array<Object>, id: number) => Object | undefined;
 declare const arrConcat: Array<String>;
 declare const arrConcatTwo: Array<String>;
 declare const concatFn: (arr1: Array<String>, arr2: Array<String>) => String[];
